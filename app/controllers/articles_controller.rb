@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  http_basic_authenticate_with name: "admin", password: "secret", only: [:destroy,:edit,:update]
 
   def index
     @articles = Article.all
