@@ -1,24 +1,51 @@
-# README
+# Leave a note website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the free world
 
-Things you may want to cover:
+* A website that allow you to leave notes and comments anonymously.
 
-* Ruby version
+## How to access the website
 
-* System dependencies
+### Through the heroku webstie
 
-* Configuration
+Go to the website [Here](https://rocky-shore-08946.herokuapp.com/)
 
-* Database creation
+### In your local machine
 
-* Database initialization
+1. First, clone this repo to your local mechine with __git__ command.
+* `git clone https://github.com/YatoAki/leave-a-note`
+2. Go to the cloned source code dictionary.
+* `cd ./leave-a-note`
+3. Install the required gems
+* `bundle install`
+4. Run the rails server
+* `rails server`
+5. Go to `http://localhost:3000/` in your broswer
 
-* How to run the test suite
+## Website architecture
 
-* Services (job queues, cache servers, search engines, etc.)
+### Model
 
-* Deployment instructions
+#### Article - `article.rb`
 
-* ...
+* Title, body, status
+* has many _comments_
+
+#### Comment - `comment.rb`
+
+* Commenter, body
+* belong to _article_
+
+### Controller
+
+#### ArticlesController - `articles_controller.rb`
+
+* index, show, new, create, edit, update, destroy
+
+#### CommentsController - `comments_controller.rb`
+
+* create, destroy
+
+## Authentication
+
+* Edit & Destroy method can only be accessed by Admin
