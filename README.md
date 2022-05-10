@@ -18,9 +18,13 @@ Go to the website [Here](https://rocky-shore-08946.herokuapp.com/)
 * `cd ./leave-a-note`
 3. Install the required gems
 * `bundle install`
-4. Run the rails server
+4. Migrate the database
+* `rails db:migrate`
+5. Seed the database _(Optional)_
+* `rails db:seed`
+6. Run the rails server
 * `rails server`
-5. Go to `http://localhost:3000/` in your broswer
+7. Go to `http://localhost:3000/` in your broswer
 
 ## Website architecture
 
